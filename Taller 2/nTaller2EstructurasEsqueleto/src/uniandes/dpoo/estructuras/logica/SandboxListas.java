@@ -313,7 +313,6 @@ public class SandboxListas
             int v = minimo + (int)(Math.random() * rango);
             listaEnteros.add(v);
         }
-
     }
 
 }

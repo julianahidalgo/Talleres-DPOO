@@ -11,6 +11,7 @@ import java.util.HashMap;
  * 
  * Implemente los métodos usando operaciones sobre arreglos (ie., no haga cosas como construir listas para evitar la manipulación de arreglos).
  */
+
 public class SandboxArreglos
 {
     /**
@@ -154,17 +155,15 @@ public class SandboxArreglos
     public void insertarEntero( int entero, int posicion )
     {
     	int n = arregloEnteros.length;
-        // Normalizar posición de inserción en el arreglo aumentado
         if (posicion < 0) posicion = 0;
-        if (posicion > n) posicion = n; // insertar al final
+        if (posicion > n) posicion = n;
 
         int[] nuevo = new int[n + 1];
-        // Copia antes de la posición
         for (int i = 0; i < posicion; i++)
             nuevo[i] = arregloEnteros[i];
-        // Inserta
+
         nuevo[posicion] = entero;
-        // Copia después
+
         for (int i = posicion; i < n; i++)
             nuevo[i + 1] = arregloEnteros[i];
 
@@ -182,10 +181,10 @@ public class SandboxArreglos
         if (posicion < 0 || posicion >= n) return;
 
         int[] nuevo = new int[n - 1];
-        // Copia antes
+
         for (int i = 0; i < posicion; i++)
             nuevo[i] = arregloEnteros[i];
-        // Copia después
+
         for (int i = posicion + 1; i < n; i++)
             nuevo[i - 1] = arregloEnteros[i];
 
@@ -265,7 +264,7 @@ public class SandboxArreglos
             for (int i = 0; i < n - 1; i++) {
                 String a = arregloCadenas[i];
                 String b = arregloCadenas[i + 1];
-                // Suponemos que no hay posiciones "vacías" (null). Si existieran, se puede decidir política.
+
                 if (a.compareTo(b) > 0) {
                     arregloCadenas[i] = b;
                     arregloCadenas[i + 1] = a;
@@ -394,13 +393,13 @@ public class SandboxArreglos
         if (otroArreglo == null) return false;
         if (arregloEnteros.length != otroArreglo.length) return false;
 
-        // Copias locales para ordenar sin tocar el atributo
+
         int[] a = new int[arregloEnteros.length];
         int[] b = new int[otroArreglo.length];
         for (int i = 0; i < a.length; i++) a[i] = arregloEnteros[i];
         for (int i = 0; i < b.length; i++) b[i] = otroArreglo[i];
 
-        // Ordenar ambas 
+
         for (int i = 1; i < a.length; i++) {
             int key = a[i], j = i - 1;
             while (j >= 0 && a[j] > key) { a[j + 1] = a[j]; j--; }

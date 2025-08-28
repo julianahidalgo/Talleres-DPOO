@@ -136,7 +136,6 @@ public class SandboxConjuntos
     {
         if (cadena == null) return;
 
-        // Usamos Iterator para poder remover de forma segura durante el recorrido.
         Iterator<String> it = arbolCadenas.iterator();
         while (it.hasNext())
         {
@@ -144,7 +143,6 @@ public class SandboxConjuntos
             if (actual != null && actual.equalsIgnoreCase(cadena))
             {
                 it.remove();
-                // Como es set, a lo sumo hay una coincidencia exacta; podemos cortar.
                 break;
             }
         }
@@ -173,7 +171,6 @@ public class SandboxConjuntos
         arbolCadenas.clear();
         if (objetos == null) return;
 
-        // for index
         for (int i = 0; i < objetos.size(); i++)
         {
             String s = String.valueOf(objetos.get(i));
@@ -208,7 +205,6 @@ public class SandboxConjuntos
             return b.compareTo(a);
         });
 
-        // for-each
         for (String s : arbolCadenas)
         {
             desc.add(s);
@@ -216,6 +212,7 @@ public class SandboxConjuntos
         return desc;
     }
 
+    
     /**
      * Verifica si todos los elementos en el arreglo de cadenas del parámetro hacen parte del conjunto de cadenas
      * @param otroArreglo El arreglo de enteros con el que se debe comparar
