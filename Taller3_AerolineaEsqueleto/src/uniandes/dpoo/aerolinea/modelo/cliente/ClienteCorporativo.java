@@ -7,9 +7,53 @@ import org.json.JSONObject;
  */
 public class ClienteCorporativo extends Cliente
 {
-    // TODO completar
-    
 
+	
+	// Atributos
+	
+	public static final String CORPORATIVO = "Corporativo";
+	
+	public static final int GRANDE = 1;
+	
+	public static final int MEDIANA = 2;
+	
+	public static final int PEQUENA = 3;
+	
+	private String nombreEmpresa;
+	
+	private int tamanoEmpresa;
+	
+	// Constructor
+	
+	public ClienteCorporativo(String nombreEmpresa, int tamano) {
+		
+		this.nombreEmpresa = nombreEmpresa;
+		tamanoEmpresa = tamano;
+	}
+    
+	// Metodos
+	
+	public String getNombreEmpresa() {
+		
+		return "";
+	}
+	
+	public int getTamanoEmpresa() {
+		
+		return 0;
+		
+	}
+	
+	public String getTipoCliente() {
+		
+		return "";
+	}
+	
+	public String getIdentificador() {
+		
+		return "";
+	}
+	
 
     /**
      * Crea un nuevo objeto de tipo a partir de un objeto JSON.
