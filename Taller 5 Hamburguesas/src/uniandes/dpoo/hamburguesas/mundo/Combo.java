@@ -49,13 +49,12 @@ public class Combo implements Producto
     @Override
     public int getPrecio( )
     {
-        double precio = 0;
-        for( Producto i : itemsCombo )
+        double suma = 0;
+        for (ProductoMenu i : itemsCombo)
         {
-            precio += i.getPrecio( );
+            suma += i.getPrecio();
         }
-
-        return ( int ) ( precio * descuento );
+        return (int) Math.floor(suma * (1.0 - descuento));
     }
 
     /**

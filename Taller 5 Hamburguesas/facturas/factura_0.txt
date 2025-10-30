@@ -1,0 +1,12 @@
+Cliente: Cliente X
+Dirección: Dir X
+----------------
+corral
+            14000
+Combo combo corral
+ Descuento: 0.1
+            22050
+----------------
+Precio Neto:  36050
+IVA:          6849
+Precio Total: 42899
